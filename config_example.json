@@ -1,0 +1,11 @@
+{
+    "local": {
+        "database": {
+            "host": "localhost",
+            "user": "user",
+            "password": "password",
+            "database": "db",
+            "connectionLimit": 10
+        }
+    }
+}
