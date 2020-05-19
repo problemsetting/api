@@ -3,10 +3,14 @@ var router = express.Router()
 
 async function postSolution(req, res) {
     const payload = req.body
-    
-    if (!payload.source_code || !payload.language) {
+    const Util = req.container.get('libs.util')
+
+    if(!Util.validateArguments(payload, [
+        'source_code',
+        'language'
+    ])) {
         return res.json({
-            error: 'Missing required params'
+            error: 'Missing required params.'
         })
     }
 

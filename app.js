@@ -14,7 +14,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // middlewares
-app.use('/', require('./middlewares/database'));
+app.use(require('./middlewares/database'));
+app.use(require('./middlewares/di'));
 
 // routes
 app.use('/', indexRouter);
