@@ -11,4 +11,7 @@ router.get('/', function (req, res) {
 /* solution REST */
 router.use('/solution/', require('./solution'))
 
+/* testcase REST */
+router.use('/testcase/', require('./testcase'))
+
 module.exports = router
